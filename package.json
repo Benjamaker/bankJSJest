@@ -1,0 +1,8 @@
+{
+  "name": "bank",
+  "version": "1.0.0",
+  "description": "simple bank app",
+  "main": "index.js",
+  "author": "Benjamaker",
+  "license": "MIT"
+}
