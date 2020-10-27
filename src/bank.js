@@ -1,6 +1,7 @@
 class Bank {
-  constructor(balance) {
+  constructor(balance, accountName) {
     this.balance = 0
+    this.accountName = accountName
   }
 }
 
