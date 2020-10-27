@@ -21,4 +21,10 @@ describe('Bank', () => {
     expect(myBank.balance).toEqual(1000);
   });
 
+  it('Client can make a withdrawal', () => {
+    myBank.deposit(1000);
+    myBank.withdraw(500);
+    expect(myBank.balance).toEqual(500);
+  });
+
 });  
