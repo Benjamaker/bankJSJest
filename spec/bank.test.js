@@ -1,11 +1,24 @@
 const Bank = require('../src/bank')
 
-test('Bank has a balance', () => {
-  let myBank = new Bank(0);
-  expect(myBank.balance).toEqual(0);
-});
+describe('Bank', () => {
+  
+  let myBank;
+  
+  beforeEach(() => {
+    myBank = new Bank(0, "Benjamaker");
+  });
+  
+  it('Bank has a balance', () => { 
+    expect(myBank.balance).toEqual(0);
+  });
 
-test('Bank has an account name', () => {
-  let myBank = new Bank(0, "Benjamaker");
-  expect(myBank.accountName).toEqual("Benjamaker");
-});
+  it('Bank has an account name', () => { 
+    expect(myBank.accountName).toEqual("Benjamaker");
+  });
+
+  it('Client can make a deposit', () => {
+    myBank.deposit(1000);
+    expect(myBank.balance).toEqual(1000);
+  });
+
+});  
