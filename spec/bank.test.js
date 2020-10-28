@@ -27,9 +27,15 @@ describe('Bank', () => {
     expect(myBank.balance).toEqual(500);
   });
 
-  it('can record a transaction', () => {
+  it('can record a deposit', () => {
     myBank.deposit(1000);
     expect(myBank.transactions.length).toEqual(1);
+  });
+
+  it('can record a withdrawal', () => {
+    myBank.deposit(1000);
+    myBank.withdraw(500);
+    expect(myBank.transactions.length).toEqual(2);
   });
 
 });  
