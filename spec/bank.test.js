@@ -27,4 +27,9 @@ describe('Bank', () => {
     expect(myBank.balance).toEqual(500);
   });
 
+  it('can record a transaction', () => {
+    myBank.deposit(1000);
+    expect(myBank.transactions.length).toEqual(1);
+  });
+
 });  
